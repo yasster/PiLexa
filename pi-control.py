@@ -13,7 +13,7 @@ state = False;
 @ask.intent('StudyMode', mapping={'status': 'status'})
 def script_execution(status):
 
-    if status in ['on','high' ]:
+    if status in ['enable','high' ]:
       if (state == True):
         return statement('StudyMode is already on')
       else:
@@ -23,7 +23,7 @@ def script_execution(status):
         return statement('Turning StudyMode {}'.format(status))
         
 
-    if status in ['off','low' ]:
+    if status in ['disable','low' ]:
       #print('status of mode',state)
       if (state == False):
         return statement('StudyMode is already off')
