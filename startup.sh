@@ -1,5 +1,7 @@
 #!/bin/bash
 
-./ngrok http 5000 -subdomain pilocal > /dev/null &
+pihole disable &
 
-python pi-control.py > /dev/null &
+./home/evengy/PIlexangrok http 5000 -subdomain pilocal > /dev/null &
+
+python /home/evengy/PIlexa/pi-control.py > /dev/null &
